@@ -93,24 +93,5 @@ To help users better understand and use our code, we briefly overview the functi
 You are always welcome to contribute to this repository by sending a [pull request](https://help.github.com/articles/about-pull-requests/).
 Please run `flake8 --ignore E501 .` and `python ./scripts/test_before_push.py` before you commit the code. Please also update the code structure [overview](docs/overview.md) accordingly if you add or remove files.
 
-## Citation
-If you use this code for your research, please cite our papers.
-```
-@inproceedings{CycleGAN2017,
-  title={Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks},
-  author={Zhu, Jun-Yan and Park, Taesung and Isola, Phillip and Efros, Alexei A},
-  booktitle={Computer Vision (ICCV), 2017 IEEE International Conference on},
-  year={2017}
-}
-
-
-@inproceedings{isola2017image,
-  title={Image-to-Image Translation with Conditional Adversarial Networks},
-  author={Isola, Phillip and Zhu, Jun-Yan and Zhou, Tinghui and Efros, Alexei A},
-  booktitle={Computer Vision and Pattern Recognition (CVPR), 2017 IEEE Conference on},
-  year={2017}
-}
-```
-
 ## Acknowledgments
 TODO
