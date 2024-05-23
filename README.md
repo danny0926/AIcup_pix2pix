@@ -34,6 +34,15 @@ bash ./datasets/download_pix2pix_dataset.sh facades
 ```
 - To view training results and loss plots, run `python -m visdom.server` and click the URL http://localhost:8097.
 - To log training progress and test images to W&B dashboard, set the `--use_wandb` flag with train and test script
+- Preprocessing the model:
+```bash
+### make sure that the origin data is downloaded.
+cd dataset
+### the customize preprocessing
+python preprocess.py --input_dir /path/to/input/dir/ --output_dir /path/to/output/dir/
+### combine image data and label data 
+python ai_cup_combine.py --fold_A /path/to/fold_A/ --fold_B /path/to/fold_B/
+```
 - Train a model:
 ```bash
 #!./scripts/train_pix2pix.sh
