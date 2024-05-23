@@ -45,40 +45,17 @@ python ai_cup_combine.py --fold_A /path/to/fold_A/ --fold_B /path/to/fold_B/
 ```
 - Train a model:
 ```bash
-#!./scripts/train_pix2pix.sh
-python train.py --dataroot ./datasets/facades --name facades_pix2pix --model pix2pix --direction BtoA
+python train.py --dataroot ./datasets/facades --name facades_pix2pix --model pix2pix --direction AtoB
 ```
 To see more intermediate results, check out  `./checkpoints/facades_pix2pix/web/index.html`.
 
-- Test the model (`bash ./scripts/test_pix2pix.sh`):
+- Test the model:
 ```bash
-#!./scripts/test_pix2pix.sh
-python test.py --dataroot ./datasets/facades --name facades_pix2pix --model pix2pix --direction BtoA
+python test.py --dataroot ./datasets/facades --name facades_pix2pix --model pix2pix --direction AtoB
 ```
 - The test results will be saved to a html file here: `./results/facades_pix2pix/test_latest/index.html`. You can find more scripts at `scripts` directory.
 - To train and test pix2pix-based colorization models, please add `--model colorization` and `--dataset_mode colorization`. See our training [tips](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix/blob/master/docs/tips.md#notes-on-colorization) for more details.
 
-
-### Apply a pre-trained model (pix2pix)
-Download a pre-trained model with `./scripts/download_pix2pix_model.sh`.
-
-- Check [here](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix/blob/master/scripts/download_pix2pix_model.sh#L3) for all the available pix2pix models. For example, if you would like to download label2photo model on the Facades dataset,
-```bash
-bash ./scripts/download_pix2pix_model.sh facades_label2photo
-```
-- Download the pix2pix facades datasets:
-```bash
-bash ./datasets/download_pix2pix_dataset.sh facades
-```
-- Then generate the results using
-```bash
-python test.py --dataroot ./datasets/facades/ --direction BtoA --model pix2pix --name facades_label2photo_pretrained
-```
-- Note that we specified `--direction BtoA` as Facades dataset's A to B direction is photos to labels.
-
-- If you would like to apply a pre-trained model to a collection of input images (rather than image pairs), please use `--model test` option. See `./scripts/test_single.sh` for how to apply a model to Facade label maps (stored in the directory `facades/testB`).
-
-- See a list of currently available models at `./scripts/download_pix2pix_model.sh`
 
 ## Acknowledgments
 TODO
