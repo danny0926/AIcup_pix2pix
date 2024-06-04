@@ -57,7 +57,7 @@ python test.py --dataroot ./datasets/facades --name facades_pix2pix --model pix2
 - To train and test pix2pix-based colorization models, please add `--model colorization` and `--dataset_mode colorization`. See our training [tips](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix/blob/master/docs/tips.md#notes-on-colorization) for more details.
 
 ### Using the pretrained model
-If you want to use the trained model for the aicup, first download the [trained_model.zip](https://drive.google.com/file/d/1r3qU4AIT9TF2JzlWTjHJmafFTw-Kn3gb/view?usp=sharing) and put under the ##checkpoints## folder. Please noted that the file names are the name of the model, and the testing data is put in the correct path.
+If you want to use the trained model for the aicup, first download the [trained_model.zip](https://drive.google.com/file/d/1r3qU4AIT9TF2JzlWTjHJmafFTw-Kn3gb/view?usp=sharing) and put under the **checkpoints** folder. Please noted that the file names are the name of the model, and the testing data is put in the correct path.
 Using below commands:
 ```bash
 ### testing road data
